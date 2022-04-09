@@ -27,7 +27,7 @@ const Home = (props: props) => {
         {
           links.map(link => {
             return(
-              <Link href={`/article/${link.path}`}>
+              <Link href={`/article/${link.path}`} key={link.path}>
                 <a className={styles.link}>
                   <div className={styles.text}>
                     <p>{link.title}</p>

@@ -5,12 +5,21 @@ import { GetStaticProps } from 'next'
 import getArticle, {PageProps} from '../../utils/get_article'
 import { getPaths } from '../../utils/get_paths'
 import { Text } from "../../components/Text"
+import { useRouter } from 'next/router'
 
 type PathParams = {
   id: string,
 }
 
 const Home = (props: PageProps) => {
+  const router = useRouter();
+  if(router.isFallback){
+    return(
+      <div>
+        Loading...
+      </div>
+    )
+  }
   return (
     <div className={styles.container}>
       <Head title={props.title}/>
@@ -35,10 +44,10 @@ export default Home
 export const getStaticPaths: GetStaticPaths = async() => {
   const getpaths = await getPaths();
 
-  const paths = getpaths.map(id => ({params:{id: id || "404"}}));
+  const paths = getpaths.map(id => ({params:{id: id}}));
 
   return{
-    paths,
+    paths: paths,
     fallback: true
   }
 }
