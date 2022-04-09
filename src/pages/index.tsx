@@ -27,13 +27,13 @@ const Home = (props: props) => {
         {
           links.map(link => {
             return(
-                <Link href={`/article/${link.path}`}>
-                  <a className={styles.link}>
-                    <div className={styles.text}>
-                      <p>{link.title}</p>
-                    </div>
-                  </a>
-                </Link>)
+              <Link href={`/article/${link.path}`}>
+                <a className={styles.link}>
+                  <div className={styles.text}>
+                    <p>{link.title}</p>
+                  </div>
+                </a>
+              </Link>)
           })
         }
         </div>
