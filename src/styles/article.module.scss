@@ -1,0 +1,25 @@
+@import "./font";
+$defaultcolor: #606060;
+
+.main{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  @extend .minamoto_light;
+  color: $defaultcolor;
+  .title{
+    h2{
+      font-weight: normal;
+      font-size: 4em;
+      text-decoration: underline;
+      text-decoration-color: $defaultcolor;
+      text-decoration-thickness: 3px;
+    }
+    margin-top: 105px;
+    margin-bottom: 105px;
+  }
+  .article{
+    font-size: 2em;
+  }
+}
