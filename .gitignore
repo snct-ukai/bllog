@@ -34,3 +34,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 blog-snct-ukai-firebase-adminsdk-l7zdl-947023c7d0.json
+src/utils/adobeloader.js
